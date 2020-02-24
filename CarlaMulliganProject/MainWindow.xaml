@@ -1,0 +1,85 @@
+﻿<Window x:Class="CarlaMulliganProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarlaMulliganProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <TabControl TabStripPlacement="Top">
+
+        <TabItem Name="Sheep" Header="Sheep" Width="150">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="66*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="55*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="614*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="39*"/>
+                    <RowDefinition Height="53*"/>
+                    <RowDefinition Height="299*"/>
+                </Grid.RowDefinitions>
+
+                <ListBox x:Name="lbxcustomersEX1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" Margin="0,0,0,-36">
+                    <ListBox x:Name="SheepLBX" Height="290" Width="221"/>
+                    <RadioButton Content="Suffolk"/>
+                    <RadioButton Content="Galway"/>
+                    <RadioButton Content="Ryeland"/>
+                    <ListBox Height="100" Width="100"/>
+                </ListBox>
+                <TextBlock HorizontalAlignment="Left" Margin="11,13,0,0" TextWrapping="Wrap" Text="Available Today" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="192" FontSize="20" Grid.RowSpan="2"/>
+            </Grid>
+
+        </TabItem>
+        <TabItem Name="BeefBreeds" Header="Beef Breeds" Width="150">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="84*"/>
+                    <ColumnDefinition Width="247*"/>
+                    <ColumnDefinition Width="456*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <ListBox x:Name="BeefLBX" HorizontalAlignment="Left" Height="281" Grid.Row="1" VerticalAlignment="Top" Width="214" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Available Today" VerticalAlignment="Top" Width="214" Height="24" FontSize="20" Grid.ColumnSpan="2"/>
+                <RadioButton Content="Limousin" HorizontalAlignment="Left" Margin="10,326,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton Content="Angus" HorizontalAlignment="Left" Margin="10,306,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton Content="Dexter" HorizontalAlignment="Left" Margin="10,286,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <Button Content="Button" HorizontalAlignment="Left" Margin="187,108,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <ListBox HorizontalAlignment="Left" Height="281" Margin="88.5,0,0,0" VerticalAlignment="Top" Width="235" Grid.Row="1" Grid.Column="2"/>
+            </Grid>
+
+        </TabItem>
+        <TabItem Name="DairyBreeds" Header="Dairy Breeds" Width="150">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="94*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="90*"/>
+                </Grid.RowDefinitions>
+                <ListBox x:Name="DairyLBX" HorizontalAlignment="Left" Height="286" Margin="10,34,0,0" VerticalAlignment="Top" Width="232" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="21,2,0,0" TextWrapping="Wrap" Text="Available Today" VerticalAlignment="Top" Width="201" FontSize="20"/>
+                <RadioButton Content="Friesian" HorizontalAlignment="Left" Margin="10,286,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton Content="Jersey" HorizontalAlignment="Left" Margin="10,306,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton Content="Simmental" HorizontalAlignment="Left" Margin="10,326,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            </Grid>
+
+        </TabItem>
+
+    </TabControl>
+
+</Window>
