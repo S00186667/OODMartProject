@@ -29,14 +29,23 @@
                     <RowDefinition Height="299*"/>
                 </Grid.RowDefinitions>
 
-                <ListBox x:Name="lbxcustomersEX1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" Margin="0,0,0,-36">
-                    <ListBox x:Name="SheepLBX" Height="290" Width="221"/>
-                    <RadioButton Content="Suffolk"/>
-                    <RadioButton Content="Galway"/>
-                    <RadioButton Content="Ryeland"/>
-                    <ListBox Height="100" Width="100"/>
+                <ListBox x:Name="lbxsheep" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="2" Margin="0,0,0,-83">
+                    <ListBox x:Name="SheepLBX" Height="267" Width="221" SelectionChanged="SheepLBX_SelectionChanged"/>
+                    <RadioButton x:Name="All" Content="All" Checked="All_Checked"/>
+                    <RadioButton x:Name="rbryeland" Content="Ryeland"/>
+                    <RadioButton x:Name="rbsuffolk" Content="Suffolk"/>
+                    <RadioButton x:Name="rbgalway" Content="Galway"/>
                 </ListBox>
-                <TextBlock HorizontalAlignment="Left" Margin="11,13,0,0" TextWrapping="Wrap" Text="Available Today" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="192" FontSize="20" Grid.RowSpan="2"/>
+                <Button x:Name="addbtn" Content="add sheep" Grid.Column="6" Margin="170,0,378,260" Grid.Row="2" Click="Addbtn_Click"></Button>
+                <Button x:Name="removebtn" Content="Remove Sheep" Grid.Column="6" Margin="156,63,362,197" Grid.Row="2"/>
+                <Button x:Name="filtersheep" Content="Filter Sheep" Grid.Column="4" Margin="14,237,0,23" Grid.Row="2" Grid.ColumnSpan="2" Click="Flitersheep_Click"></Button>
+                <ListBox x:Name="buysheeplbx" Grid.Column="6" Margin="344,10,64,80" Grid.Row="1" Grid.RowSpan="2"/>
+                <TextBlock x:Name="sheepdescription" Grid.Column="6" Margin="117,149,326,80" Grid.Row="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="11,13,0,0" TextWrapping="Wrap" Text="Available Today : Granard Mart" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="291" FontSize="15" Grid.RowSpan="2"/>
+                <ComboBox Margin="130,33,0,0" Name="Combobox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Height="30" Grid.Column="6" SelectionChanged="Combobox1_SelectionChanged" Grid.RowSpan="2">
+                    <ComboBoxItem Content="0-100" Margin="249,0,-249,0"></ComboBoxItem>
+                    <ComboBoxItem Content="100-200" Margin="269,0,-269,0"></ComboBoxItem>
+                </ComboBox>
             </Grid>
 
         </TabItem>
@@ -52,7 +61,7 @@
                     <RowDefinition Height="90*"/>
                 </Grid.RowDefinitions>
                 <ListBox x:Name="BeefLBX" HorizontalAlignment="Left" Height="281" Grid.Row="1" VerticalAlignment="Top" Width="214" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Available Today" VerticalAlignment="Top" Width="214" Height="24" FontSize="20" Grid.ColumnSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Available Today Granard Mart" VerticalAlignment="Top" Width="321" Height="24" FontSize="20" Grid.ColumnSpan="2"/>
                 <RadioButton Content="Limousin" HorizontalAlignment="Left" Margin="10,326,0,0" Grid.Row="1" VerticalAlignment="Top"/>
                 <RadioButton Content="Angus" HorizontalAlignment="Left" Margin="10,306,0,0" Grid.Row="1" VerticalAlignment="Top"/>
                 <RadioButton Content="Dexter" HorizontalAlignment="Left" Margin="10,286,0,0" Grid.Row="1" VerticalAlignment="Top"/>

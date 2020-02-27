@@ -20,11 +20,10 @@ namespace CarlaMulliganProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<LivestockDetails> AllSheep = new List<LivestockDetails>();
-        List<LivestockDetails> AllBeef = new List<LivestockDetails>();
-        List<LivestockDetails> AllDairy = new List<LivestockDetails>();
-
-
+        List<LivestockDetails> AllLiveStock = new List<LivestockDetails>();
+        List<LivestockDetails> fliteredlivestock;
+      //  List<LivestockDetails> FliteredList; 
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -33,52 +32,68 @@ namespace CarlaMulliganProject
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            SheepLBX.ItemsSource = AllLiveStock; 
 
-            SheepLBX.ItemsSource = AllSheep;
-            BeefLBX.ItemsSource = AllBeef;
-            DairyLBX.ItemsSource = AllDairy; 
+            fliteredlivestock = new List<LivestockDetails>();
+            //   FliteredList = new List<LivestockDetails>(); 
 
             //Sheep Details
             LivestockDetails Sheep1 = new LivestockDetails
             {
                 Breed = "Suffolk",
                 Gender = "F",
-                DOB = new DateTime(2019, 2, 1)
+                DOB = new DateTime(2019, 2, 1),
+                Description = "Breeding Ewe", 
+                Cost = 110m 
+           
+                
             };
 
             LivestockDetails Sheep2 = new LivestockDetails
             {
                 Breed = "Suffolk",
                 Gender = "M",
-                DOB = new DateTime(2019, 4, 1)
+                DOB = new DateTime(2019, 4, 1), 
+                Description = "Breeding Ram", 
+                Cost = 100m 
+                
             };
 
             LivestockDetails Sheep3 = new LivestockDetails
             {
                 Breed = "Galway",
                 Gender = "M",
-                DOB = new DateTime(2019, 5, 14)
+                DOB = new DateTime(2019, 5, 14),
+                Description = "Cull Ram",
+                Cost = 70m
+
             };
 
             LivestockDetails Sheep4 = new LivestockDetails
             {
                 Breed = "Galway",
                 Gender = "F",
-                DOB = new DateTime(2019, 3, 3)
+                DOB = new DateTime(2019, 3, 3), 
+                Description = "Old Ewe", 
+                Cost = 140m 
             };
 
             LivestockDetails Sheep5 = new LivestockDetails
             {
                 Breed = "Ryeland",
-                Gender = "M",
-                DOB = new DateTime(2019, 5, 17)
+                Gender = "F",
+                DOB = new DateTime(2019, 5, 17), 
+                Description = "Hogget", 
+                Cost = 91m
             };
 
             LivestockDetails Sheep6 = new LivestockDetails
             {
                 Breed = "Ryeland",
                 Gender = "M",
-                DOB = new DateTime(2019, 5, 16)
+                DOB = new DateTime(2019, 5, 16),
+                Description = "Hogget",
+                Cost = 100m 
             };
 
             //Beef Details
@@ -169,32 +184,125 @@ namespace CarlaMulliganProject
             };
 
 
-            AllSheep.Add(Sheep1);
-            AllSheep.Add(Sheep2);
-            AllSheep.Add(Sheep3);
-            AllSheep.Add(Sheep4);
-            AllSheep.Add(Sheep5);
-            AllSheep.Add(Sheep6);
 
-            AllBeef.Add(Beef1);
-            AllBeef.Add(Beef2);
-            AllBeef.Add(Beef3);
-            AllBeef.Add(Beef4);
-            AllBeef.Add(Beef5);
-            AllBeef.Add(Beef6);
+            AllLiveStock.Add(Sheep1);
+            AllLiveStock.Add(Sheep2);
+            AllLiveStock.Add(Sheep3);
+            AllLiveStock.Add(Sheep4);
+            AllLiveStock.Add(Sheep5);
+            AllLiveStock.Add(Sheep6);
+            AllLiveStock.Add(Beef1);
+            AllLiveStock.Add(Beef2);
+            AllLiveStock.Add(Beef3);
+            AllLiveStock.Add(Beef4);
+            AllLiveStock.Add(Beef5);
+            AllLiveStock.Add(Beef6);
+            AllLiveStock.Add(Dairy1);
+            AllLiveStock.Add(Dairy2);
+            AllLiveStock.Add(Dairy3);
+            AllLiveStock.Add(Dairy4);
+            AllLiveStock.Add(Dairy5);
+            AllLiveStock.Add(Dairy6);
 
-            AllDairy.Add(Dairy1);
-            AllDairy.Add(Dairy2);
-            AllDairy.Add(Dairy3);
-            AllDairy.Add(Dairy4);
-            AllDairy.Add(Dairy5);
-            AllDairy.Add(Dairy6);
+           // List<string> fliteredsheep = AllLiveStock.Where(LivestockDetails == "Sheep"); 
+
+          /*  foreach(var s in AllLiveStock)
+                if(s.Breed == "Suffolk" || s.Breed == "Galway" || s.Breed == "Ryeland")
+                {
+                    SheepLBX.ItemsSource = s.Breed; 
+                }*/
+
+        }
+
+        private void SheepLBX_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            LivestockDetails selectedlivestock = SheepLBX.SelectedItem as LivestockDetails;
+            if (selectedlivestock != null)
+                sheepdescription.Text = selectedlivestock.Description; 
+                
+                
+           
+
+        }
+
+
+        private void Addbtn_Click(object sender, RoutedEventArgs e)
+        {
+           
+            
+        }
+
+        private void All_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton selectedRB = sender as RadioButton;
+            string fliterBy = selectedRB.Content as string;
+
+            FliterType(fliterBy);
+        }
+
+        private void FliterType(string fliterby)
+        {
+            fliteredlivestock.Clear(); 
+
+            switch(fliterby)
+            {
+                case "Suffolk":
+                    foreach(LivestockDetails livestock in AllLiveStock)
+                    {
+                        if (livestock.Breed == "Suffolk")
+                            fliteredlivestock.Add(livestock); 
+                    }
+
+                    SheepLBX.ItemsSource = null;
+                    SheepLBX.ItemsSource = fliteredlivestock;
+
+                    break;
+
+                case "Galway":
+                    foreach (LivestockDetails livestock in AllLiveStock)
+                    {
+                        if (livestock.Breed == "Galway")
+                            fliteredlivestock.Add(livestock);
+                    }
+
+                    SheepLBX.ItemsSource = null;
+                    SheepLBX.ItemsSource = fliteredlivestock;
+                    break;
+
+                case "Ryeland":
+                    foreach (LivestockDetails livestock in AllLiveStock)
+                    {
+                        if (livestock.Breed == "Ryeland")
+                            fliteredlivestock.Add(livestock);
+                    }
+
+                    SheepLBX.ItemsSource = null;
+                    SheepLBX.ItemsSource = fliteredlivestock;
+                    break;
+
+                default:
+                    SheepLBX.ItemsSource = AllLiveStock;
+                    break; 
+
+            }
 
 
         }
-       
-        
 
-        
+        private void Flitersheep_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (SheepLBX != null)
+            {
+                if (rbsuffolk.IsChecked == true) FliterType("Suffolk");
+                if (rbgalway.IsChecked == true) FliterType("Galway");
+                if (rbryeland.IsChecked == true) FliterType("Ryeland");
+            }
+        }
+
+        private void Combobox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
