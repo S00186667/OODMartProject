@@ -35,7 +35,7 @@ namespace CarlaMulliganProject
             SheepLBX.ItemsSource = AllLiveStock; 
 
             fliteredlivestock = new List<LivestockDetails>();
-            //   FliteredList = new List<LivestockDetails>(); 
+            //FliteredList = new List<LivestockDetails>(); 
 
             //Sheep Details
             LivestockDetails Sheep1 = new LivestockDetails
@@ -74,7 +74,7 @@ namespace CarlaMulliganProject
                 Breed = "Galway",
                 Gender = "F",
                 DOB = new DateTime(2019, 3, 3), 
-                Description = "Old Ewe", 
+                Description = "Ewe", 
                 Cost = 140m 
             };
 
@@ -83,7 +83,7 @@ namespace CarlaMulliganProject
                 Breed = "Ryeland",
                 Gender = "F",
                 DOB = new DateTime(2019, 5, 17), 
-                Description = "Hogget", 
+                Description = "Ewe", 
                 Cost = 91m
             };
 

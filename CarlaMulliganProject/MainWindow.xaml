@@ -41,7 +41,7 @@
                 <Button x:Name="filtersheep" Content="Filter Sheep" Grid.Column="4" Margin="14,237,0,23" Grid.Row="2" Grid.ColumnSpan="2" Click="Flitersheep_Click"></Button>
                 <ListBox x:Name="buysheeplbx" Grid.Column="6" Margin="344,10,64,80" Grid.Row="1" Grid.RowSpan="2"/>
                 <TextBlock x:Name="sheepdescription" Grid.Column="6" Margin="117,149,326,80" Grid.Row="2"/>
-                <TextBlock HorizontalAlignment="Left" Margin="11,13,0,0" TextWrapping="Wrap" Text="Available Today : Granard Mart" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="291" FontSize="15" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,8,0,0" TextWrapping="Wrap" Text="Available Today : Granard Mart" VerticalAlignment="Top" Grid.ColumnSpan="7" Width="291" FontSize="15"/>
                 <ComboBox Margin="130,33,0,0" Name="Combobox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="154" Height="30" Grid.Column="6" SelectionChanged="Combobox1_SelectionChanged" Grid.RowSpan="2">
                     <ComboBoxItem Content="0-100" Margin="249,0,-249,0"></ComboBoxItem>
                     <ComboBoxItem Content="100-200" Margin="269,0,-269,0"></ComboBoxItem>
