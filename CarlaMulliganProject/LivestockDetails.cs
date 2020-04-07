@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarlaMulliganProject
 {
-    class LivestockDetails
+    public class LivestockDetails
     {
 
         public string Breed { get; set; }
@@ -16,6 +17,11 @@ namespace CarlaMulliganProject
         public decimal Cost { get; set;  }
 
         private string description; 
+
+
+        public int HerdNumber { get; set; }
+        public virtual AnimalInfo animalInfo { get; set; }
+
 
         public string Description
         {
@@ -33,6 +39,27 @@ namespace CarlaMulliganProject
         {
             return string.Format("{0} - {1} - {2}", Breed, Gender, DOB.ToShortDateString()); 
         }
+
+    }
+    public class AnimalInfo
+    {
+        public int HerdNumber { get; set; }
+
+        public bool TBTesting { get; set; } 
+
+        public virtual List<LivestockDetails> Livestock { get; set; }
+
+
+    }
+
+    public class AnimalData : DbContext
+    {
+
+        public AnimalData():base("GranardMartData") { }
+
+        public DbSet<LivestockDetails> Livestock { get; set; }
+        public DbSet<AnimalInfo> Info { get; set; }
+
 
     }
 }
