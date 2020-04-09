@@ -17,26 +17,26 @@ namespace DataManagement
 
             using(db) //safely closing all connections to database
             {
-                AnimalInfo SuffolkF = new AnimalInfo() { HerdNumber = 200, TBTesting = true };
-                AnimalInfo SuffolkM = new AnimalInfo() { HerdNumber = 201, TBTesting = true };
-                AnimalInfo GalwayM = new AnimalInfo() { HerdNumber = 150, TBTesting = false };
-                AnimalInfo GalwayF = new AnimalInfo() { HerdNumber = 270, TBTesting = true };
-                AnimalInfo RyelandF = new AnimalInfo() { HerdNumber = 302, TBTesting = true };
-                AnimalInfo RyelandM = new AnimalInfo() { HerdNumber = 303, TBTesting = true };
+                AnimalInfo SuffolkF = new AnimalInfo() { ID = 200, TBTesting = true };
+                AnimalInfo SuffolkM = new AnimalInfo() { ID = 201, TBTesting = true };
+                AnimalInfo GalwayM = new AnimalInfo() { ID = 150, TBTesting = false };
+                AnimalInfo GalwayF = new AnimalInfo() { ID = 270, TBTesting = true };
+                AnimalInfo RyelandF = new AnimalInfo() { ID = 302, TBTesting = true };
+                AnimalInfo RyelandM = new AnimalInfo() { ID = 303, TBTesting = true };
 
-                AnimalInfo DexterM = new AnimalInfo() { HerdNumber = 1400, TBTesting = false };
-                AnimalInfo DexterF = new AnimalInfo() { HerdNumber = 12, TBTesting = true };
-                AnimalInfo AngusM = new AnimalInfo() { HerdNumber = 780, TBTesting = true };
-                AnimalInfo AngusF = new AnimalInfo() { HerdNumber = 130, TBTesting = true };
-                AnimalInfo LimousinM = new AnimalInfo() { HerdNumber = 160, TBTesting = true };
-                AnimalInfo LimousinF = new AnimalInfo() { HerdNumber = 560, TBTesting = false};
+                AnimalInfo DexterM = new AnimalInfo() { ID = 1400, TBTesting = false };
+                AnimalInfo DexterF = new AnimalInfo() { ID = 12, TBTesting = true };
+                AnimalInfo AngusM = new AnimalInfo() { ID = 780, TBTesting = true };
+                AnimalInfo AngusF = new AnimalInfo() { ID = 130, TBTesting = true };
+                AnimalInfo LimousinM = new AnimalInfo() { ID = 160, TBTesting = true };
+                AnimalInfo LimousinF = new AnimalInfo() { ID = 560, TBTesting = false};
 
-                AnimalInfo FriesianF = new AnimalInfo() { HerdNumber = 740, TBTesting = true };
-                AnimalInfo FriesianM = new AnimalInfo() { HerdNumber = 400, TBTesting = true };
-                AnimalInfo JerseyM = new AnimalInfo() { HerdNumber = 16, TBTesting = false };
-                AnimalInfo JerseyF = new AnimalInfo() { HerdNumber = 1700, TBTesting = true };
-                AnimalInfo SimmnatalF = new AnimalInfo() { HerdNumber = 30, TBTesting = true };
-                AnimalInfo SimmnatalM = new AnimalInfo() { HerdNumber = 31, TBTesting = true };
+                AnimalInfo FriesianF = new AnimalInfo() { ID = 740, TBTesting = true };
+                AnimalInfo FriesianM = new AnimalInfo() { ID = 400, TBTesting = true };
+                AnimalInfo JerseyM = new AnimalInfo() { ID = 16, TBTesting = false };
+                AnimalInfo JerseyF = new AnimalInfo() { ID = 1700, TBTesting = true };
+                AnimalInfo SimmnatalF = new AnimalInfo() { ID = 30, TBTesting = true };
+                AnimalInfo SimmnatalM = new AnimalInfo() { ID = 31, TBTesting = true };
 
 
 
@@ -48,7 +48,7 @@ namespace DataManagement
                     DOB = new DateTime(2019, 2, 1),
                     Description = "Breeding Ewe",
                     Cost = 110m,
-                    HerdNumber = 200,
+                    HerdID = 200,
                     animalInfo = SuffolkF
 
                 };
@@ -60,7 +60,7 @@ namespace DataManagement
                     DOB = new DateTime(2019, 4, 1),
                     Description = "Breeding Ram",
                     Cost = 100m,
-                    HerdNumber = 201,
+                    HerdID = 201,
                     animalInfo = SuffolkM
 
                 };
@@ -71,8 +71,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14),
                     Description = "Ram",
-                    Cost = 70m, 
-                    HerdNumber = 150, 
+                    Cost = 70m,
+                    HerdID = 150, 
                     animalInfo = GalwayM
 
                 };
@@ -83,8 +83,8 @@ namespace DataManagement
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3),
                     Description = "Ewe",
-                    Cost = 140m, 
-                    HerdNumber = 270, 
+                    Cost = 140m,
+                    HerdID = 270, 
                     animalInfo = GalwayF
                 };
 
@@ -95,7 +95,7 @@ namespace DataManagement
                     DOB = new DateTime(2019, 5, 17),
                     Description = "Ewe",
                     Cost = 91m, 
-                    HerdNumber = 302, 
+                    HerdID = 302, 
                     animalInfo = RyelandF
                 };
 
@@ -105,8 +105,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16),
                     Description = "Hogget",
-                    Cost = 100m, 
-                    HerdNumber = 303, 
+                    Cost = 100m,
+                    HerdID = 303, 
                     animalInfo = RyelandM
                 };
 
@@ -118,7 +118,7 @@ namespace DataManagement
                     DOB = new DateTime(2019, 2, 1), 
                     Description = "Heifer",
                     Cost = 400m, 
-                    HerdNumber = 1400, 
+                    HerdID = 1400, 
                     animalInfo = DexterF
                 };
 
@@ -138,8 +138,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14), 
                     Description = "Calf",
-                    Cost = 450m, 
-                    HerdNumber = 780, 
+                    Cost = 450m,
+                    HerdID = 780, 
                     animalInfo = AngusM
                 };
 
@@ -149,8 +149,8 @@ namespace DataManagement
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3), 
                     Description = "Heifer", 
-                    Cost = 600m, 
-                    HerdNumber = 160, 
+                    Cost = 600m,
+                    HerdID = 160, 
                     animalInfo = AngusF
                 };
 
@@ -160,8 +160,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 17), 
                     Description = "Bull", 
-                    Cost = 350m, 
-                    HerdNumber = 130, 
+                    Cost = 350m,
+                    HerdID = 130, 
                     animalInfo = LimousinM
                 };
 
@@ -171,8 +171,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16), 
                     Description = "Male Calf",
-                    Cost = 250m, 
-                    HerdNumber = 560, 
+                    Cost = 250m,
+                    HerdID = 560, 
                     animalInfo = LimousinM
                 };
 
@@ -184,8 +184,8 @@ namespace DataManagement
                     Gender = "F",
                     DOB = new DateTime(2019, 2, 1), 
                     Description = "Heifer",
-                    Cost = 600m, 
-                    HerdNumber = 740, 
+                    Cost = 600m,
+                    HerdID = 740, 
                     animalInfo = FriesianF
                 };
 
@@ -195,8 +195,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 4, 1), 
                     Description = "Bullock", 
-                    Cost = 150m, 
-                    HerdNumber = 400, 
+                    Cost = 150m,
+                    HerdID = 400, 
                     animalInfo = FriesianM
                 };
 
@@ -206,8 +206,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14), 
                     Description = "Bullock", 
-                    Cost = 200m, 
-                    HerdNumber = 16, 
+                    Cost = 200m,
+                    HerdID = 16, 
                     animalInfo = JerseyM
 
                 };
@@ -218,8 +218,8 @@ namespace DataManagement
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3), 
                     Description = "Heifer",
-                    Cost = 550m, 
-                    HerdNumber = 1700, 
+                    Cost = 550m,
+                    HerdID = 1700, 
                     animalInfo = JerseyF
                 };
 
@@ -229,8 +229,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 17), 
                     Description = "Bullock",
-                    Cost = 250m, 
-                    HerdNumber = 31, 
+                    Cost = 250m,
+                    HerdID = 31, 
                     animalInfo = SimmnatalM
 
                 };
@@ -241,8 +241,8 @@ namespace DataManagement
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16), 
                     Description = "Calf", 
-                    Cost = 400m, 
-                    HerdNumber = 32, 
+                    Cost = 400m,
+                    HerdID = 32, 
                     animalInfo = SimmnatalM
                 };
 

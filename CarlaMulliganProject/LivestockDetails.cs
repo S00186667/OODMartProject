@@ -19,7 +19,7 @@ namespace CarlaMulliganProject
         private string description; 
 
 
-        public int HerdNumber { get; set; }
+        public int HerdID { get; set; }
         public virtual AnimalInfo animalInfo { get; set; }
 
 
@@ -43,7 +43,7 @@ namespace CarlaMulliganProject
     }
     public class AnimalInfo
     {
-        public int HerdNumber { get; set; }
+        public int ID { get; set; }
 
         public bool TBTesting { get; set; } 
 

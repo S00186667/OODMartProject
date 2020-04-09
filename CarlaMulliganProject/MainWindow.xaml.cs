@@ -20,8 +20,8 @@ namespace CarlaMulliganProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<LivestockDetails> AllLiveStock = new List<LivestockDetails>();
-        List<LivestockDetails> fliteredlivestock;
+       // List<LivestockDetails> AllLiveStock = new List<LivestockDetails>();
+       // List<LivestockDetails> fliteredlivestock;
       //  List<LivestockDetails> FliteredList; 
        
         public MainWindow()
@@ -32,7 +32,7 @@ namespace CarlaMulliganProject
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            SheepLBX.ItemsSource = AllLiveStock; 
+            /*SheepLBX.ItemsSource = AllLiveStock; 
 
             fliteredlivestock = new List<LivestockDetails>();
             //FliteredList = new List<LivestockDetails>(); 
@@ -216,9 +216,9 @@ namespace CarlaMulliganProject
 
         private void SheepLBX_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            LivestockDetails selectedlivestock = SheepLBX.SelectedItem as LivestockDetails;
+           /* LivestockDetails selectedlivestock = SheepLBX.SelectedItem as LivestockDetails;
             if (selectedlivestock != null)
-                sheepdescription.Text = selectedlivestock.Description; 
+                sheepdescription.Text = selectedlivestock.Description; */
                 
                 
            
@@ -234,15 +234,15 @@ namespace CarlaMulliganProject
 
         private void All_Checked(object sender, RoutedEventArgs e)
         {
-            RadioButton selectedRB = sender as RadioButton;
+           /* RadioButton selectedRB = sender as RadioButton;
             string fliterBy = selectedRB.Content as string;
 
-            FliterType(fliterBy);
+            FliterType(fliterBy);*/
         }
 
         private void FliterType(string fliterby)
         {
-            fliteredlivestock.Clear(); 
+          /*  fliteredlivestock.Clear(); 
 
             switch(fliterby)
             {
@@ -284,7 +284,7 @@ namespace CarlaMulliganProject
                     SheepLBX.ItemsSource = AllLiveStock;
                     break; 
 
-            }
+            }*/
 
 
         }
@@ -292,12 +292,12 @@ namespace CarlaMulliganProject
         private void Flitersheep_Click(object sender, RoutedEventArgs e)
         {
 
-            if (SheepLBX != null)
+           /* if (SheepLBX != null)
             {
                 if (rbsuffolk.IsChecked == true) FliterType("Suffolk");
                 if (rbgalway.IsChecked == true) FliterType("Galway");
                 if (rbryeland.IsChecked == true) FliterType("Ryeland");
-            }
+            }*/
         }
 
         private void Combobox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
