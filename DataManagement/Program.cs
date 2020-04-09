@@ -17,255 +17,256 @@ namespace DataManagement
 
             using(db) //safely closing all connections to database
             {
-                AnimalInfo SuffolkF = new AnimalInfo() { ID = 200, TBTesting = true };
-                AnimalInfo SuffolkM = new AnimalInfo() { ID = 201, TBTesting = true };
-                AnimalInfo GalwayM = new AnimalInfo() { ID = 150, TBTesting = false };
-                AnimalInfo GalwayF = new AnimalInfo() { ID = 270, TBTesting = true };
-                AnimalInfo RyelandF = new AnimalInfo() { ID = 302, TBTesting = true };
-                AnimalInfo RyelandM = new AnimalInfo() { ID = 303, TBTesting = true };
+                //AnimalInfo SuffolkF = new AnimalInfo() { ID = 200, TBTesting = true };
+                //AnimalInfo SuffolkM = new AnimalInfo() { ID = 201, TBTesting = true };
+                //AnimalInfo GalwayM = new AnimalInfo() { ID = 150, TBTesting = false };
+                //AnimalInfo GalwayF = new AnimalInfo() { ID = 270, TBTesting = true };
+                //AnimalInfo RyelandF = new AnimalInfo() { ID = 302, TBTesting = true };
+                //AnimalInfo RyelandM = new AnimalInfo() { ID = 303, TBTesting = true };
 
-                AnimalInfo DexterM = new AnimalInfo() { ID = 1400, TBTesting = false };
-                AnimalInfo DexterF = new AnimalInfo() { ID = 12, TBTesting = true };
-                AnimalInfo AngusM = new AnimalInfo() { ID = 780, TBTesting = true };
-                AnimalInfo AngusF = new AnimalInfo() { ID = 130, TBTesting = true };
-                AnimalInfo LimousinM = new AnimalInfo() { ID = 160, TBTesting = true };
-                AnimalInfo LimousinF = new AnimalInfo() { ID = 560, TBTesting = false};
+                //AnimalInfo DexterM = new AnimalInfo() { ID = 1400, TBTesting = false };
+                //AnimalInfo DexterF = new AnimalInfo() { ID = 12, TBTesting = true };
+                //AnimalInfo AngusM = new AnimalInfo() { ID = 780, TBTesting = true };
+                //AnimalInfo AngusF = new AnimalInfo() { ID = 130, TBTesting = true };
+                //AnimalInfo LimousinM = new AnimalInfo() { ID = 160, TBTesting = true };
+                //AnimalInfo LimousinF = new AnimalInfo() { ID = 560, TBTesting = false};
 
-                AnimalInfo FriesianF = new AnimalInfo() { ID = 740, TBTesting = true };
-                AnimalInfo FriesianM = new AnimalInfo() { ID = 400, TBTesting = true };
-                AnimalInfo JerseyM = new AnimalInfo() { ID = 16, TBTesting = false };
-                AnimalInfo JerseyF = new AnimalInfo() { ID = 1700, TBTesting = true };
-                AnimalInfo SimmnatalF = new AnimalInfo() { ID = 30, TBTesting = true };
-                AnimalInfo SimmnatalM = new AnimalInfo() { ID = 31, TBTesting = true };
-
-
+                //AnimalInfo FriesianF = new AnimalInfo() { ID = 740, TBTesting = true };
+                //AnimalInfo FriesianM = new AnimalInfo() { ID = 400, TBTesting = true };
+                //AnimalInfo JerseyM = new AnimalInfo() { ID = 16, TBTesting = false };
+                //AnimalInfo JerseyF = new AnimalInfo() { ID = 1700, TBTesting = true };
+                //AnimalInfo SimmnatalF = new AnimalInfo() { ID = 30, TBTesting = true };
+                //AnimalInfo SimmnatalM = new AnimalInfo() { ID = 31, TBTesting = true };
 
 
-                LivestockDetails Sheep1 = new LivestockDetails
+
+
+                Animal Sheep1 = new Animal
                 {
                     Breed = "Suffolk",
                     Gender = "F",
                     DOB = new DateTime(2019, 2, 1),
                     Description = "Breeding Ewe",
                     Cost = 110m,
-                    HerdID = 200,
-                    animalInfo = SuffolkF
+                    ID = 200,
+                    TBTesting = true
 
                 };
 
-                LivestockDetails Sheep2 = new LivestockDetails
+                Animal Sheep2 = new Animal
                 {
                     Breed = "Suffolk",
                     Gender = "M",
                     DOB = new DateTime(2019, 4, 1),
                     Description = "Breeding Ram",
                     Cost = 100m,
-                    HerdID = 201,
-                    animalInfo = SuffolkM
+                    ID = 201,
+                    TBTesting = true
+
 
                 };
 
-                LivestockDetails Sheep3 = new LivestockDetails
+                Animal Sheep3 = new Animal
                 {
                     Breed = "Galway",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14),
                     Description = "Ram",
                     Cost = 70m,
-                    HerdID = 150, 
-                    animalInfo = GalwayM
+                    ID = 150, 
+                    TBTesting = true
 
                 };
 
-                LivestockDetails Sheep4 = new LivestockDetails
+                Animal Sheep4 = new Animal
                 {
                     Breed = "Galway",
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3),
                     Description = "Ewe",
                     Cost = 140m,
-                    HerdID = 270, 
-                    animalInfo = GalwayF
+                    ID = 270, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Sheep5 = new LivestockDetails
+                Animal Sheep5 = new Animal
                 {
                     Breed = "Ryeland",
                     Gender = "F",
                     DOB = new DateTime(2019, 5, 17),
                     Description = "Ewe",
                     Cost = 91m, 
-                    HerdID = 302, 
-                    animalInfo = RyelandF
+                    ID = 302, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Sheep6 = new LivestockDetails
+                Animal Sheep6 = new Animal
                 {
                     Breed = "Ryeland",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16),
                     Description = "Hogget",
                     Cost = 100m,
-                    HerdID = 303, 
-                    animalInfo = RyelandM
+                    ID = 303, 
+                    TBTesting = true
                 };
 
                 //Beef Details
-                LivestockDetails Beef1 = new LivestockDetails
+                Animal Beef1 = new Animal
                 {
                     Breed = "Dexter",
                     Gender = "F",
                     DOB = new DateTime(2019, 2, 1), 
                     Description = "Heifer",
                     Cost = 400m, 
-                    HerdID = 1400, 
-                    animalInfo = DexterF
+                    ID = 1400, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Beef2 = new LivestockDetails
+                Animal Beef2 = new Animal
                 {
                     Breed = "Dexter",
                     Gender = "M",
                     DOB = new DateTime(2019, 4, 1), 
                     Description = "Bullock",
                     Cost = 600m, 
-                    animalInfo = DexterM
+                    TBTesting = true
                 };
 
-                LivestockDetails Beef3 = new LivestockDetails
+                Animal Beef3 = new Animal
                 {
                     Breed = "Angus",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14), 
                     Description = "Calf",
                     Cost = 450m,
-                    HerdID = 780, 
-                    animalInfo = AngusM
+                    ID = 780, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Beef4 = new LivestockDetails
+                Animal Beef4 = new Animal
                 {
                     Breed = "Angus",
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3), 
                     Description = "Heifer", 
                     Cost = 600m,
-                    HerdID = 160, 
-                    animalInfo = AngusF
+                    ID = 160, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Beef5 = new LivestockDetails
+                Animal Beef5 = new Animal
                 {
                     Breed = "Limousin",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 17), 
                     Description = "Bull", 
                     Cost = 350m,
-                    HerdID = 130, 
-                    animalInfo = LimousinM
+                    ID = 130, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Beef6 = new LivestockDetails
+                Animal Beef6 = new Animal
                 {
                     Breed = "Limousin",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16), 
                     Description = "Male Calf",
                     Cost = 250m,
-                    HerdID = 560, 
-                    animalInfo = LimousinM
+                    ID = 560, 
+                    TBTesting = true
                 };
 
 
                 //Dairy Details
-                LivestockDetails Dairy1 = new LivestockDetails
+                Animal Dairy1 = new Animal
                 {
                     Breed = "Friesian",
                     Gender = "F",
                     DOB = new DateTime(2019, 2, 1), 
                     Description = "Heifer",
                     Cost = 600m,
-                    HerdID = 740, 
-                    animalInfo = FriesianF
+                    ID = 740, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Dairy2 = new LivestockDetails
+                Animal Dairy2 = new Animal
                 {
                     Breed = "Friesian",
                     Gender = "M",
                     DOB = new DateTime(2019, 4, 1), 
                     Description = "Bullock", 
                     Cost = 150m,
-                    HerdID = 400, 
-                    animalInfo = FriesianM
+                    ID = 400, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Dairy3 = new LivestockDetails
+                Animal Dairy3 = new Animal
                 {
                     Breed = "Jersey",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 14), 
                     Description = "Bullock", 
                     Cost = 200m,
-                    HerdID = 16, 
-                    animalInfo = JerseyM
+                    ID = 16, 
+                    TBTesting = true
 
                 };
 
-                LivestockDetails Dairy4 = new LivestockDetails
+                Animal Dairy4 = new Animal
                 {
                     Breed = "Jersey",
                     Gender = "F",
                     DOB = new DateTime(2019, 3, 3), 
                     Description = "Heifer",
                     Cost = 550m,
-                    HerdID = 1700, 
-                    animalInfo = JerseyF
+                    ID = 1700, 
+                    TBTesting = true
                 };
 
-                LivestockDetails Dairy5 = new LivestockDetails
+                Animal Dairy5 = new Animal
                 {
                     Breed = "Simmnetal",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 17), 
                     Description = "Bullock",
                     Cost = 250m,
-                    HerdID = 31, 
-                    animalInfo = SimmnatalM
+                    ID = 31, 
+                    TBTesting = true
 
                 };
 
-                LivestockDetails Dairy6 = new LivestockDetails
+                Animal Dairy6 = new Animal
                 {
                     Breed = "Simmnetal",
                     Gender = "M",
                     DOB = new DateTime(2019, 5, 16), 
                     Description = "Calf", 
                     Cost = 400m,
-                    HerdID = 32, 
-                    animalInfo = SimmnatalM
+                    ID = 32, 
+                    TBTesting = true
                 };
 
-                db.Info.Add(SuffolkF);
-                db.Info.Add(SuffolkM);
-                db.Info.Add(GalwayF);
-                db.Info.Add(GalwayM);
-                db.Info.Add(RyelandF);
-                db.Info.Add(RyelandM);
+                //db.Info.Add(SuffolkF);
+                //db.Info.Add(SuffolkM);
+                //db.Info.Add(GalwayF);
+                //db.Info.Add(GalwayM);
+                //db.Info.Add(RyelandF);
+                //db.Info.Add(RyelandM);
 
-                db.Info.Add(DexterF);
-                db.Info.Add(DexterM);
-                db.Info.Add(AngusF);
-                db.Info.Add(AngusM);
-                db.Info.Add(LimousinF);
-                db.Info.Add(LimousinM);
+                //db.Info.Add(DexterF);
+                //db.Info.Add(DexterM);
+                //db.Info.Add(AngusF);
+                //db.Info.Add(AngusM);
+                //db.Info.Add(LimousinF);
+                //db.Info.Add(LimousinM);
 
-                db.Info.Add(FriesianF);
-                db.Info.Add(FriesianM);
-                db.Info.Add(JerseyF);
-                db.Info.Add(JerseyM);
-                db.Info.Add(SimmnatalF);
-                db.Info.Add(SimmnatalM);
+                //db.Info.Add(FriesianF);
+                //db.Info.Add(FriesianM);
+                //db.Info.Add(JerseyF);
+                //db.Info.Add(JerseyM);
+                //db.Info.Add(SimmnatalF);
+                //db.Info.Add(SimmnatalM);
 
                 Console.WriteLine("Animal info added to database");
 

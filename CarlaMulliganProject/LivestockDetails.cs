@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CarlaMulliganProject
 {
-    public class LivestockDetails
+    public class Animal
     {
 
         public string Breed { get; set; }
@@ -16,11 +16,13 @@ namespace CarlaMulliganProject
 
         public decimal Cost { get; set;  }
 
-        private string description; 
+        private string description { get; set; }
 
+        public bool TBTesting { get; set; }
 
-        public int HerdID { get; set; }
-        public virtual AnimalInfo animalInfo { get; set; }
+        public int ID { get; set; }
+        
+        //public virtual AnimalInfo animalInfo { get; set; }
 
 
         public string Description
@@ -41,24 +43,24 @@ namespace CarlaMulliganProject
         }
 
     }
-    public class AnimalInfo
-    {
-        public int ID { get; set; }
+    //public class AnimalInfo
+    //{
+    //    public int ID { get; set; }
 
-        public bool TBTesting { get; set; } 
+    //    public bool TBTesting { get; set; } 
 
-        public virtual List<LivestockDetails> Livestock { get; set; }
+    //    public virtual List<LivestockDetails> Livestock { get; set; }
 
 
-    }
+    //}
 
     public class AnimalData : DbContext
     {
 
         public AnimalData():base("GranardMartData") { }
 
-        public DbSet<LivestockDetails> Livestock { get; set; }
-        public DbSet<AnimalInfo> Info { get; set; }
+        public DbSet<Animal> Livestock { get; set; }
+        //public DbSet<AnimalInfo> Info { get; set; }
 
 
     }
